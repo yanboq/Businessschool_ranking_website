@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include partials/template/head.ejs %>
+  </head>
+  <body id="<%= pageID %>">
+    <% include partials/template/header.ejs %>
+    <% include partials/content/checkbox.ejs %>
+    <table class="table  table-hover">
+    <thead>
+      <tr>
+        <th>Rank</th>
+        <th>University</th>
+        <th>Program</th>
+        <th>Year</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% rankinfo.forEach(function(item) { %>
+        <tr>
+          <td class="info"><%= item.ranking%></td>
+          <td><%= item.schoolName %></td>
+          <td><%= item.programName %></td>
+          <td><%= item.year %></td>
+        </tr>
+      <% }); %>
+    </tbody>
+  </table>
+</div>
+
+
+    <% include partials/template/footer.ejs %>
+
+    <% include partials/template/jsdefaults.ejs %>
+  </body>
+</html>

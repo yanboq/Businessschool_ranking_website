@@ -1,0 +1,22 @@
+<table class="table  table-hover">
+<thead>
+  <tr>
+    <th>University</th>
+    <th>Rank</th>
+    <th>Program</th>
+    <th>Website</th>
+    <th>Year</th>
+  </tr>
+</thead>
+<tbody>
+  <% rankinfo.forEach(function(item) { %>
+    <tr>
+      <td class="info"><%= item.schoolName %></td>
+      <td><%= item.ranking%></td>
+      <td><%= item.programName %></td>
+      <td><%= item.websiteName %></td>
+      <td><%= item.year %></td>
+    </tr>
+  <% }); %>
+</tbody>
+</table>

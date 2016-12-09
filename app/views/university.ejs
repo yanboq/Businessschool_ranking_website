@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include partials/template/head.ejs %>
+
+
+  </head>
+  <body id="<%= pageID %>">
+    <% include partials/template/header.ejs %>
+
+  <div class="container" style="background: rgb(169, 179, 224)blue" >
+    <blockquote class="blockquote">
+      <p>
+        Economists report that a college education adds many thousands of dollars to a man's lifetime income -- which he then spends sending his son to college.
+      </p>
+      <footer class="blockquote-footer">Bill Vaughn</footer>
+    </blockquote>
+  <form action="/university/specific" method="post" class="form-group">
+    <div class="row">
+      <div class="col-md-4">
+        <label for="university">University</label>
+        <input type="text" class="form-control" name="university" id="university" placeholder="Please enter a university name">
+      </div>
+      <div class="col-md-2">
+        <label for="program">Program</label>
+        <select name="program" class="form-control">
+          <option name="program" value="mba">MBA</option>
+          <option name="program" value="msis">MSIS</option>
+          <option name="program" value="msba">MSBA</option>
+        </select>
+      </div>
+      <div class="col-md-2">
+        <label for="website">Website</label>
+        <select name="website" class="form-control">
+          <option name="website" value="1">US NEWS</option>
+          <option name="website" value="2">TFE TIMES</option>
+          <option name="website" value="3">QS</option>
+        </select>
+      </div>
+      <div class="col-md-2">
+        <label for="year">year</label>
+        <select name="year" class="form-control">
+          <option name="year" value="2016">2016</option>
+          <option name="year" value="2015">2015</option>
+          <option name="year" value="2014">2014</option>
+        </select>
+      </div>
+      <div class="col-md-2">
+        <button style="margin: 25px 10px" class="btn btn-success" type="submit" name="button">Search</button>
+      </div>
+    </div>
+  </div>
+  </form>
+
+  <% if (pageID == 'universitysearch') { %>
+    <div class="container">
+    <table class="table  table-hover">
+    <thead>
+      <tr>
+        <th>University</th>
+        <th>Rank</th>
+        <th>Program</th>
+        <th>Website</th>
+        <th>Year</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% rankinfo.forEach(function(item) { %>
+        <tr>
+          <td class="info"><%= item.schoolName %></td>
+          <td><%= item.ranking%></td>
+          <td><%= item.programName %></td>
+          <td><%= item.websiteName %></td>
+          <td><%= item.year %></td>
+        </tr>
+      <% }); %>
+    </tbody>
+    </table>
+    </div>
+  <% } %>
+
+
+
+    <% include partials/template/footer.ejs %>
+    <% include partials/template/jsdefaults.ejs %>
+  </body>
+</html>

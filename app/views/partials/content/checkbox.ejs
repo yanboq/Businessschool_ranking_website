@@ -1,0 +1,129 @@
+<div class="container ">
+  <% if (pageID == 'mba') { %>
+    <blockquote cite="#">
+      MBA</br>A Master of Business Administration (MBA or M.B.A.) holds a master's degree in business administration . The core courses in an MBA program cover various areas of business such as accounting, finance, marketing, human resources, and operations in a manner most relevant to management analysis and strategy.
+    </blockquote>
+    <form action="/program/mba/search" method="post" class="form-group">
+      <div class="radio radio-success radio-inline">
+        <input type="radio" name="database" id="db1" value="1">
+        <label for="db1">USNEWS</label>
+      </div>
+      <div class="radio radio-success radio-inline">
+        <input type="radio" name="database" id="db2" value="2">
+        <label for="db2">TFETIMES</label>
+      </div>
+      <div class="radio radio-success radio-inline">
+        <input type="radio" name="database" id="db3" value="3">
+        <label for="db3">QS</label>
+      </div>
+  <% } %>
+  <% if (pageID == 'msis') { %>
+    <blockquote cite="#">
+      MSIS</br>The Master of Science in Information Systems (MSIS) and the Master of Science in Management Information Systems (MSMIS) are specialized master's degree programs usually offered in a university's College of Business and in integrated Information Science & Technology colleges in recent years.
+    </blockquote>
+    <form action="/program/msis/search" method="post" class="form-group">
+      <div class="radio radio-success radio-inline">
+        <input type="radio" name="database" id="db1" value="1">
+        <label for="db1">USNEWS</label>
+      </div>
+      <div class="radio radio-success radio-inline">
+        <input type="radio" name="database" id="db2" value="2">
+        <label for="db2">TFETIMES</label>
+      </div>
+      <div class="radio radio-success radio-inline">
+        <input type="radio" name="database" id="db3" value="3">
+        <label for="db3">QS</label>
+      </div>
+  <% } %>
+  <% if (pageID == 'msba') { %>
+    <blockquote cite="#">
+      MSBA</br>The mission of the Master of Science in Business Administration (MSBA) Program is to provide high quality business education to those who strive to become leaders in business, government and education.
+    </blockquote>
+  <form action="/program/msba/search" method="post" class="form-group">
+    <div class="radio radio-success radio-inline">
+      <input type="radio" name="database" id="db1" value="1">
+      <label for="db1">USNEWS</label>
+    </div>
+    <div class="radio radio-success radio-inline">
+      <input type="radio" name="database" id="db2" value="2">
+      <label for="db2">TFETIMES</label>
+    </div>
+    <div class="radio radio-success radio-inline">
+      <input type="radio" name="database" id="db3" value="3">
+      <label for="db3">QS</label>
+    </div>
+<% } %>
+
+<% if (pageID == 'usnews') { %>
+  <blockquote cite="#">
+    USNEWS</br>U.S. News & World Report is a multi-platform publisher of news and information, which includes www.usnews.com and www.rankingsandreviews.com. U.S. News publishes annual print and e-book versions of its authoritative rankings of Best Colleges, Best Graduate Schools and Best Hospitals. In 2012 U.S. News launched a conference division focusing on important national conversations and solutions in STEM Education and Hospitals of Tomorrow.
+  </blockquote>
+<form action="/database/usnews/search" method="post" class="form-group">
+  <div class="radio radio-success radio-inline">
+    <input type="radio" name="programName" id="db1" value="mba">
+    <label for="db1">MBA</label>
+  </div>
+  <div class="radio radio-success radio-inline">
+    <input type="radio" name="programName" id="db2" value="msis">
+    <label for="db2">MSIS</label>
+  </div>
+  <div class="radio radio-success radio-inline">
+    <input type="radio" name="programName" id="db3" value="msba">
+    <label for="db3">MSBA</label>
+  </div>
+<% } %>
+
+<% if (pageID == 'tfetimes') { %>
+  <blockquote cite="#">
+    TFE TIMES</br>The world's leading digital media site.
+  </blockquote>
+<form action="/database/tfetimes/search" method="post" class="form-group">
+  <div class="radio radio-success radio-inline">
+    <input type="radio" name="programName" id="db1" value="mba">
+    <label for="db1">MBA</label>
+  </div>
+  <div class="radio radio-success radio-inline">
+    <input type="radio" name="programName" id="db2" value="msis">
+    <label for="db2">MSIS</label>
+  </div>
+  <div class="radio radio-success radio-inline">
+    <input type="radio" name="programName" id="db3" value="msba">
+    <label for="db3">MSBA</label>
+  </div>
+<% } %>
+
+<% if (pageID == 'qs') { %>
+  <blockquote cite="#">
+    QS </br>QS World University Rankings is an annual publication of university rankings by Quacquarelli Symonds (QS).
+  </blockquote>
+<form action="/database/qs/search" method="post" class="form-group">
+  <div class="radio radio-success radio-inline">
+    <input type="radio" name="programName" id="db1" value="mba">
+    <label for="db1">MBA</label>
+  </div>
+  <div class="radio radio-success radio-inline">
+    <input type="radio" name="programName" id="db2" value="msis">
+    <label for="db2">MSIS</label>
+  </div>
+  <div class="radio radio-success radio-inline">
+    <input type="radio" name="programName" id="db3" value="msba">
+    <label for="db3">MSBA</label>
+  </div>
+<% } %>
+
+  <div class="radio radio-info radio-inline">
+    <input type="radio" name="year" id="radio1" value="2014">
+    <label for="radio1">2014</label>
+  </div>
+  <div class="radio radio-info radio-inline">
+    <input type="radio" name="year" id="radio2" value="2015">
+    <label for="radio2">2015</label>
+  </div>
+  <div class="radio radio-info radio-inline">
+    <input type="radio" name="year" id="radio3" value="2016">
+    <label for="radio3">2016</label>
+  </div>
+  <button style="margin:10px" class="btn btn-success" type="submit" name="button">Search</button>
+</form>
+</div>
+<div class="container">
